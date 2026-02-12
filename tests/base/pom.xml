@@ -102,42 +102,42 @@
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_1.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_2.xml</include>
                             </includes>
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_2.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_3.xml</include>
                             </includes>
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_3.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_4.xml</include>
                             </includes>
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_4.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_5.xml</include>
                             </includes>
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_5.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_6.xml</include>
                             </includes>
                             <systemId>src/test/resources/schema/wrapped-elytron-client-1_6.xsd</systemId>
                         </validationSet>
                         <validationSet>
-                            <dir>${project.parent.basedir}/auth/client/src/test/resources/</dir>
+                            <dir>${maven.multiModuleProjectDirectory}/auth/client/src/test/resources/</dir>
                             <includes>
                                 <include>**/*-v1_7.xml</include>
                             </includes>

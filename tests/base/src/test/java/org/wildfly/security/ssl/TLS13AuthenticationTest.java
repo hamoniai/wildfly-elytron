@@ -144,7 +144,7 @@ public class TLS13AuthenticationTest {
     @Test
     public void testClientTLS12Only() throws Exception {
         final String TLS13_CIPHER_SUITE = "TLS_AES_128_GCM_SHA256";
-        final String TLS12_CIPHER_SUITE = "TLS_RSA_WITH_AES_128_CBC_SHA256"; // TLS v1.2
+        final String TLS12_CIPHER_SUITE = "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"; // TLS v1.2
 
         SSLContext serverContext = new SSLContextBuilder()
                 .setSecurityDomain(securityDomain)
@@ -164,7 +164,7 @@ public class TLS13AuthenticationTest {
 
     @Test
     public void testServerTLS12Only() throws Exception {
-        final String SERVER_CIPHER_SUITE = "TLS_RSA_WITH_AES_128_CBC_SHA256"; // TLS v1.2
+        final String SERVER_CIPHER_SUITE = "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"; // TLS v1.2
 
         SSLContext serverContext = new SSLContextBuilder()
                 .setSecurityDomain(securityDomain)

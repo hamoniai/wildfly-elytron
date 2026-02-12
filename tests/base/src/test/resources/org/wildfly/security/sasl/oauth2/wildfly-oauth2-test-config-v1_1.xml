@@ -104,7 +104,7 @@
             </configuration>
             <configuration name="test5.org">
                 <credentials>
-                    <bearer-token value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaXNzIjoiYXV0aC5zZXJ2ZXIiLCJhdWQiOiJmb3JfbWUiLCJleHAiOjE3NjA5OTE2MzUsInByZWZlcnJlZF91c2VybmFtZSI6Impkb2UifQ.SoPW41_mOFnKXdkwVG63agWQ2k09dEnEtTBztnxHN64"/>
+                    <bearer-token value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaXNzIjoiYXV0aC5zZXJ2ZXIiLCJhdWQiOiJmb3JfbWUiLCJleHAiOjIwNTEyMjI0MDAsInByZWZlcnJlZF91c2VybmFtZSI6Impkb2UifQ.B60zooxC-rn9zsWteBbKtJlGGP-PX0Rrpxh5GOz6Opc"/>
                 </credentials>
             </configuration>
             <configuration name="test6">
