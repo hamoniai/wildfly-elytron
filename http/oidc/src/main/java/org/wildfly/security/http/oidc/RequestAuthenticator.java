@@ -20,6 +20,8 @@ package org.wildfly.security.http.oidc;
 
 import static org.wildfly.security.http.HttpConstants.ACCEPT;
 import static org.wildfly.security.http.HttpConstants.FACES_REQUEST;
+import static org.wildfly.security.http.HttpConstants.GIT_PROTOCOL;
+import static org.wildfly.security.http.HttpConstants.ORIGIN;
 import static org.wildfly.security.http.HttpConstants.PARTIAL;
 import static org.wildfly.security.http.HttpConstants.SOAP_ACTION;
 import static org.wildfly.security.http.HttpConstants.XML_HTTP_REQUEST;
@@ -226,9 +228,13 @@ public class RequestAuthenticator {
         if (headerValue != null && headerValue.startsWith(PARTIAL)) {
             return true;
         }
-        headerValue = facade.getRequest().getHeader(SOAP_ACTION);
-        if (headerValue != null) {
-            return true;
+
+        String[] EXISTS_HEADERS = new String[]{SOAP_ACTION, ORIGIN, GIT_PROTOCOL};
+        for (String headerName: EXISTS_HEADERS) {
+            headerValue = facade.getRequest().getHeader(headerName);
+            if (headerValue != null) {
+                return true;
+            }
         }
 
         List<String> accepts = facade.getRequest().getHeaders(ACCEPT);

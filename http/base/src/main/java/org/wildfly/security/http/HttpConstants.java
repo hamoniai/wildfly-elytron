@@ -142,8 +142,10 @@ public class HttpConstants {
     public static final String AUTHENTICATION_INFO = "Authentication-Info";
     public static final String AUTHORIZATION = "Authorization";
     public static final String FACES_REQUEST = "Faces-Request";
+    public static final String GIT_PROTOCOL = "Git-Protocol";
     public static final String HOST = "Host";
     public static final String LOCATION = "Location";
+    public static final String ORIGIN = "Origin";
     public static final String SOAP_ACTION = "SOAPAction";
     public static final String WWW_AUTHENTICATE = "WWW-Authenticate";
     public static final String X_REQUESTED_WITH = "X-Requested-With";
