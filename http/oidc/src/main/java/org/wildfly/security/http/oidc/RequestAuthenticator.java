@@ -24,6 +24,7 @@ import static org.wildfly.security.http.HttpConstants.GIT_PROTOCOL;
 import static org.wildfly.security.http.HttpConstants.ORIGIN;
 import static org.wildfly.security.http.HttpConstants.PARTIAL;
 import static org.wildfly.security.http.HttpConstants.SOAP_ACTION;
+import static org.wildfly.security.http.HttpConstants.USER_AGENT;
 import static org.wildfly.security.http.HttpConstants.XML_HTTP_REQUEST;
 import static org.wildfly.security.http.HttpConstants.X_REQUESTED_WITH;
 import static org.wildfly.security.http.oidc.ElytronMessages.log;
@@ -43,6 +44,8 @@ import org.wildfly.security.http.Scope;
  * @author <a href="mailto:fjuma@redhat.com">Farah Juma</a>
  */
 public class RequestAuthenticator {
+    // Here until there is a better place
+    private static final String USER_AGENT_GIT = "git/";
 
     protected OidcHttpFacade facade;
     protected AuthChallenge challenge;
@@ -229,12 +232,19 @@ public class RequestAuthenticator {
             return true;
         }
 
+        // Check common headers that are produced by non-UI agents
         String[] EXISTS_HEADERS = new String[]{SOAP_ACTION, ORIGIN, GIT_PROTOCOL};
         for (String headerName: EXISTS_HEADERS) {
             headerValue = facade.getRequest().getHeader(headerName);
             if (headerValue != null) {
                 return true;
             }
+        }
+
+        // Check for specific browser strings. This is not really sustainable.
+        String userAgent = facade.getRequest().getHeader(USER_AGENT);
+        if (userAgent != null && userAgent.startsWith(USER_AGENT_GIT)) {
+            return true;
         }
 
         List<String> accepts = facade.getRequest().getHeaders(ACCEPT);

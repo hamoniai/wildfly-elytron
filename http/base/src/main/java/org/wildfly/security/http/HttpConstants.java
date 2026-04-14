@@ -147,6 +147,7 @@ public class HttpConstants {
     public static final String LOCATION = "Location";
     public static final String ORIGIN = "Origin";
     public static final String SOAP_ACTION = "SOAPAction";
+    public static final String USER_AGENT = "User-Agent";
     public static final String WWW_AUTHENTICATE = "WWW-Authenticate";
     public static final String X_REQUESTED_WITH = "X-Requested-With";
 
